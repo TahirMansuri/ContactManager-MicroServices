@@ -16,6 +16,14 @@ public class User {
     private String name;
     private String phone;
 
+    /***
+     * Contact List To be accesed from Database
+     */
     List<Contact> contactList = new ArrayList<Contact>();
 
+    public User(Long userId, String name, String phone) {
+        this.userId = userId;
+        this.name = name;
+        this.phone = phone;
+    }
 }

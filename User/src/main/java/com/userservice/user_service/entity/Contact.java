@@ -12,6 +12,10 @@ public class Contact {
     private Long cId;
     private String email;
     private String contactName;
+
+    /***
+     * userId as Foreign Key for defining User ID from User Table
+     */
     private Long userId;
 
 
