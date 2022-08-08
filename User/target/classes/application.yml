@@ -1,10 +1,12 @@
 server:
   port: 9001
 
+#Setting Service Name
 spring:
   application:
     name: user-service
 
+#Setting Host Name to Service
 eureka:
   instance:
     hostname: localhost

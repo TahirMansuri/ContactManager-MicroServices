@@ -39,7 +39,10 @@ public class UserController {
         User user = userService.getUser(userId);
 
         // Calling Contact Rest API using RestTemplate object
-        List contactList = restTemplate.getForObject("http://localhost:9002/contact/user/"+userId,List.class);
+        //List contactList = restTemplate.getForObject("http://localhost:9002/contact/user/"+userId,List.class);
+
+        //After Setting Eureka Instance Hostname and Service Name we directly map URL with Service Name
+        List contactList = restTemplate.getForObject("http://contact-service/contact/user/"+userId,List.class);
 
         //Setting contact list consumed from Contact API call
         user.setContactList(contactList);
