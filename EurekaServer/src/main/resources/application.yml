@@ -1,0 +1,10 @@
+server:
+  port: 8761
+
+#Setting Eureka Server for Offline Server
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
