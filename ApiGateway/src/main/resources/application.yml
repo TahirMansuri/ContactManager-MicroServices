@@ -3,9 +3,22 @@ server:
   port: 8999
 
 #Setting the Application Name for Eureka Server
+#Setting Cloud - Gateway - Routes for Different Microservices
+#Each Route contain - ID, URI and Predicates - Path
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+        - id: contact-service
+          uri: lb://contact-service
+          predicates:
+            - Path=/contact/**
 
 #Setting the Hostname
 eureka:
