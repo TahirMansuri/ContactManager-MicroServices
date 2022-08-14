@@ -1,0 +1,13 @@
+#Setting the Server port
+server:
+  port: 8999
+
+#Setting the Application Name for Eureka Server
+spring:
+  application:
+    name: api-gateway
+
+#Setting the Hostname
+eureka:
+  instance:
+    hostname: localhost
